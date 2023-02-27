@@ -1,0 +1,105 @@
+#program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 1460px;
+  margin: 0 auto;
+
+  color: var(--clr-primary);
+  text-align: center;
+}
+
+#program .spacer {
+  height: 5rem;
+}
+
+#program img.icon {
+  height: 100px;
+}
+
+#program h3 {
+  color: var(--clr-secondary);
+
+  font-family: 'Solena';
+  font-size: 2.5em;
+}
+
+#program h2 {
+  width: 100%;
+  margin: 0 auto;
+  padding-block: 0 2rem;
+
+  font-family: 'Solena';
+  font-size: 4.5em;
+  font-weight: 500;
+}
+
+#program article {
+  padding: 0 16px;
+
+  font-size: 1.5em;
+}
+
+#program .location {
+  position: relative;
+
+  padding: 12px 0;
+
+  font-family: 'Eurof35';
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#program .location::before {
+  content: '';
+  position: absolute;
+  display: block;
+
+  width: 40%;
+  height: 1px;
+  margin: 0 auto;
+  top: 0;
+  left: 30%;
+
+  background: var(--clr-primary);
+}
+
+#program .separator {
+  display: block;
+
+  width: 600px;
+  margin: 0 auto;
+}
+
+#program .map {
+  width: 100%;
+  height: 60vh;
+  margin: 24px 0;
+
+  border: none;
+  filter: invert(90%);
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1460px) {
+  #program article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #program article {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  #program .separator {
+    display: block;
+
+    width: 300px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,85 @@
+#invitation {
+  display: flex;
+  flex-flow: column;
+
+  text-align: center;
+  font-family: "Eurof35";
+}
+
+#invitation .invitation-content {
+  display: flex;
+  flex-flow: column;
+
+  margin: 8rem auto 0;
+  width: 80%;
+  max-width: 1200px;
+  min-height: 70vh;
+  z-index: 1;
+}
+
+#invitation p {
+  position: relative;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+  z-index: 1;
+
+  color: var(--clr-text);
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+#invitation span.recipient {
+  position: relative;
+
+  margin: 3rem 0 0;
+  padding: 1rem 0 0;
+
+  color: var(--clr-secondary);
+  font-family: 'Calligraph';
+  font-size: 1.2em;
+  line-height: 0.5;
+  user-select: all;
+}
+
+#invitation input.recipient {
+  width: 0;
+  min-width: max(25%, 7rem);
+
+  height: 2rem;
+
+  background-color: #00000000;
+  color: var(--clr-secondary);
+  font-family: 'Calligraph';
+  font-size: 1em;
+  text-align: center;
+
+  border: 2px solid var(--clr-primary);
+}
+
+#invitation input.recipient:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 900px) {
+  #invitation .invitation-content {
+    padding: 1rem;
+    width: 100%;
+    height: 10%;
+  }
+
+  #invitation p {
+    font-size: 2em;
+  }
+
+  #invitation span.recipient {
+    padding: 0;
+
+    font-size: 1.1em;
+  }
+
+  #invitation input.recipient {
+    font-size: 1.5em;
+  }
+}
