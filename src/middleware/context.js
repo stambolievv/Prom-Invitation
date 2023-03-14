@@ -1,6 +1,6 @@
 import { render } from 'lit-html';
 
-const root = document.getElementById('main');
+const root = document.getElementById('main') || document.body;
 
 /**
  * @description Decorates the provided context by adds some useful functions that can be used later.
@@ -9,7 +9,7 @@ const root = document.getElementById('main');
  */
 export function decorateContext(ctx, next) {
   Object.assign(ctx, {
-    render: (content) => render(content, root),
+    render: content => render(content, root),
   });
 
   next();

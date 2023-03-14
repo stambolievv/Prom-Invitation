@@ -6,16 +6,16 @@
   width: 100%;
   min-height: 100vh;
   padding: 0 20px;
-  background: url("../static/images/glitter.png") no-repeat center center;
+  background: url('/assets/images/glitter.png') no-repeat center center;
   background-size: cover;
   text-align: center;
-  font-family: "Eurof35";
+  font-family: 'Eurof35', serif, sans-serif, monospace;
 }
 
 #landing .heading {
   margin: auto;
   color: var(--clr-secondary);
-  font-family: "bridal";
+  font-family: 'bridal', serif, sans-serif, monospace;
   font-weight: 900;
   font-size: 4em;
   line-height: 2em;

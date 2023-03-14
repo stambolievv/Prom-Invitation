@@ -3,7 +3,7 @@
   flex-flow: column;
 
   text-align: center;
-  font-family: "Eurof35";
+  font-family: 'Eurof35', serif, sans-serif, monospace;
 }
 
 #invitation .invitation-content {
@@ -37,7 +37,7 @@
   padding: 1rem 0 0;
 
   color: var(--clr-secondary);
-  font-family: 'Calligraph';
+  font-family: 'Calligraph', serif, sans-serif, monospace;
   font-size: 1.2em;
   line-height: 0.5;
   user-select: all;
@@ -51,7 +51,7 @@
 
   background-color: #00000000;
   color: var(--clr-secondary);
-  font-family: 'Calligraph';
+  font-family: 'Calligraph', serif, sans-serif, monospace;
   font-size: 1em;
   text-align: center;
 
