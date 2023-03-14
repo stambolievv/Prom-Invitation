@@ -48,8 +48,8 @@ function createOption(method, data) {
   };
 
   if (typeof data !== 'undefined') {
-    options.headers['Content-Type'] = 'application/json';
-    options.body = JSON.stringify(data);
+    Object.assign(options.headers, { 'Content-Type': 'application/json' });
+    Object.assign(options, { body: JSON.stringify(data) });
   }
 
   return options;

@@ -9,8 +9,8 @@ import { invitation } from '../templates/invitationTemplate';
  * @param {string} ctx.params.id - The ID of the recipient to display details for.
  */
 export async function viewInvitation(ctx) {
-  const recipient = await getRecipient(ctx.params.id);
-  const template = invitation(html`<span class='recipient'>${recipient.name}</span>`);
+  const { name } = await getRecipient(ctx.params.id);
+  const template = invitation(html`<span class='recipient'>${name}</span>`);
 
   ctx.render(template);
 }
