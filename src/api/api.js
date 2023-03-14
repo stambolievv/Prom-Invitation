@@ -43,8 +43,8 @@ function createOption(method, data) {
     method,
     headers: {
       'X-Parse-Application-Id': import.meta.env.VITE_APPLICATION_ID,
-      'X-Parse-REST-API-Key': import.meta.env.VITE_REST_API_KEY
-    }
+      'X-Parse-REST-API-Key': import.meta.env.VITE_REST_API_KEY,
+    },
   };
 
   if (typeof data !== 'undefined') {
