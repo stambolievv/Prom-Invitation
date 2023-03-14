@@ -23,7 +23,7 @@ const pluginSettings = {
   viteBanner: { outDir: outputFolder, content: banner },
   createHtmlPlugin: { minify: true, filename: main },
 };
-console.warn(import.meta.env, process.env);
+
 export default defineConfig({
   base,
   assetsInclude: assetsFolder,
