@@ -16,16 +16,10 @@ const banner = `
 `.trim();
 const outputFolder = 'dist'; /* Specify the output directory (relative to project root). */
 const assetsFolder = 'assets'; /* Specify the assets folder */
-const main = pkg.main || 'index.html'; /* Which file watcher to open. */
-const base = process.env.NODE_ENV === 'production' ? pkg.homepage : '/';
-const pluginSettings = {
-  viteStaticCopy: { targets: [{ src: `${assetsFolder}/images`, dest: assetsFolder }] },
-  viteBanner: { outDir: outputFolder, content: banner },
-  createHtmlPlugin: { minify: true, filename: main },
-};
+const isForGithub = process.env.BRANCH === 'gh-pages'
 
 export default defineConfig({
-  base,
+  base: isForGithub ? '/Prom-Invitation/' : '/',
   assetsInclude: assetsFolder,
   server: {
     open: true,
@@ -53,8 +47,8 @@ export default defineConfig({
     }
   },
   plugins: [
-    viteStaticCopy(pluginSettings.viteStaticCopy),
-    viteBanner(pluginSettings.viteBanner),
-    createHtmlPlugin(pluginSettings.createHtmlPlugin),
+    viteStaticCopy({ targets: [{ src: `${assetsFolder}/images`, dest: assetsFolder }] }),
+    viteBanner({ outDir: outputFolder, content: banner }),
+    createHtmlPlugin({ minify: true }),
   ]
 });

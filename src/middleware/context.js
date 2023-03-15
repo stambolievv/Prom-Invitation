@@ -1,6 +1,10 @@
 import { render } from 'lit-html';
+import page from 'page';
 
 const root = document.getElementById('main') || document.body;
+const baseUrl = import.meta.env.BASE_URL.slice(0, -1);
+
+page.base(baseUrl);
 
 /**
  * @description Decorates the provided context by adds some useful functions that can be used later.
@@ -10,6 +14,7 @@ const root = document.getElementById('main') || document.body;
 export function decorateContext(ctx, next) {
   Object.assign(ctx, {
     render: content => render(content, root),
+    baseUrl,
   });
 
   next();
