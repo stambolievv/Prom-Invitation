@@ -19,10 +19,10 @@ export function createInvitation(ctx) {
  * @param {KeyboardEvent} event - The "keydown" event.
  */
 async function onSubmit(event) {
-  const value = event.target instanceof HTMLInputElement ? event.target.value : undefined;
+  const value = event.target instanceof HTMLInputElement ? event.target.value.trim() : undefined;
 
   if (event.key !== 'Enter' || !value) return;
 
-  const { objectId } = await createRecipient(value.trim());
+  const { objectId } = await createRecipient(value);
   return page.redirect(`/pokana/${objectId}`);
 }
