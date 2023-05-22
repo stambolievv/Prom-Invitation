@@ -2,104 +2,72 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   flex-wrap: wrap;
+  gap: 1rem;
 
-  width: 100%;
-  max-width: 1460px;
-  margin: 0 auto;
+  margin-bottom: 5rem;
 
-  color: var(--clr-primary);
+  color: var(--clr-program-text);
+  font-family: 'Solena', serif, sans-serif, monospace;
   text-align: center;
 }
 
-#program .spacer {
-  height: 5rem;
-}
-
-#program img.icon {
-  height: 100px;
-}
-
-#program h3 {
-  color: var(--clr-secondary);
-
-  font-family: 'Solena', serif, sans-serif, monospace;
-  font-size: 2.5em;
-}
-
-#program h2 {
-  width: 100%;
-  margin: 0 auto;
-  padding-block: 0 2rem;
-
-  font-family: 'Solena', serif, sans-serif, monospace;
-  font-size: 4.5em;
-  font-weight: 500;
-}
-
 #program article {
-  padding: 0 16px;
-
-  font-size: 1.5em;
+  margin: 0 1rem;
+  padding: 2rem;
 }
 
-#program .location {
+#program article .caption {
+  padding: 2rem;
+
+  font-size: min(9rem, 25vw);
+  font-weight: 100;
+}
+
+#program article .description {
+  padding-bottom: 1rem;
+  font-weight: 900;
+
+  color: var(--clr-program-description);
+  font-size: min(4rem, 12vw);
+}
+
+#program article .sub-description {
   position: relative;
 
-  padding: 12px 0;
-
+  color: var(--clr-program-sub-description);
   font-family: 'Eurof35', serif, sans-serif, monospace;
-  font-size: 1.5em;
+  font-size: min(2rem, 8vw);
   font-style: italic;
 }
 
-#program .location::before {
+#program article .sub-description::before {
   content: '';
   position: absolute;
-  display: block;
-
-  width: 40%;
+  width: 50%;
   height: 1px;
-  margin: 0.8rem auto;
   top: 0;
-  left: 30%;
-
-  background: var(--clr-primary);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-program-sub-description);
 }
 
 #program .separator {
-  display: block;
-
-  width: 600px;
-  margin: 0 auto;
+  padding: 0 2rem;
+  margin: 0 100%;
 }
 
 #program .map {
-  width: 100%;
+  min-width: 80vw;
   height: 60vh;
-  margin: 24px 0;
+  margin: 5rem 0;
 
   border: none;
   filter: invert(90%);
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1460px) {
-  #program article {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  #program article {
-    width: 100%;
-    font-size: 1.3em;
-  }
-
-  #program .separator {
-    display: block;
-
-    width: 300px;
-    margin: 0 auto;
+@media only screen and (max-width: 480px) {
+  #program .map {
+    min-width: 95%;
   }
 }

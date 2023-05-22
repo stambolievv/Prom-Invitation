@@ -23,11 +23,13 @@
 }
 
 :root {
-  --clr-primary: #9c9c9c;
-  --clr-secondary: #710b04;
-  --clr-text: #c2c2c2;
-
-  color-scheme: dark only;
+  --clr-landing-text: #710b04;
+  --clr-landing-name: #710b04;
+  --clr-invitation-text: #c2c2c2;
+  --clr-invitation-name: #710b04;
+  --clr-program-text: #9c9c9c;
+  --clr-program-description: #710b04;
+  --clr-program-sub-description: #9c9c9c;
 }
 
 *,
@@ -37,8 +39,21 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  color-scheme: dark only;
+  max-width: 100%;
+  /* border: 2px solid #00ff0099; */
 }
 
 body {
   background-image: url('/assets/images/background.jpg');
+  background-color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10rem;
 }

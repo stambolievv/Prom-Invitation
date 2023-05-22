@@ -1,56 +1,45 @@
 #landing {
   display: flex;
-  justify-content: flex-start;
-  flex-flow: column;
-
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 0 20px;
-  background: url('/assets/images/glitter.png') no-repeat center center;
-  background-size: cover;
+
+  color: var(--clr-landing-text);
+  font-family: 'bridal', serif, sans-serif, monospace;
   text-align: center;
-  font-family: 'Eurof35', serif, sans-serif, monospace;
+}
+
+#landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/glitter.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #landing .heading {
-  margin: auto;
-  color: var(--clr-secondary);
-  font-family: 'bridal', serif, sans-serif, monospace;
-  font-weight: 900;
-  font-size: 4em;
-  line-height: 2em;
+  display: inline-block;
+
+  font-size: min(10rem, 10vw);
+  line-height: 190%;
 }
 
 #landing .heading span {
-  font-size: 1.5em;
+  color: var(--clr-landing-name);
+  font-size: 150%;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (orientation: landscape) {
   #landing .heading {
-    padding: 0;
-
-    font-size: 3em;
-    font-weight: 800;
-    line-height: 2em;
+    font-size: min(5rem, 6vw);
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (hover: none) and (any-pointer: coarse) {
   #landing .heading {
-    padding: 0;
-
-    font-size: 2em;
-    font-weight: 600;
-    line-height: 2em;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  #landing .heading {
-    padding: 0;
-
-    font-size: 1.2em;
-    font-weight: 600;
-    line-height: 2em;
+    margin-top: -10rem;
   }
 }
