@@ -1,2 +1,2 @@
 # Prom Invitation
-🎗️ Beautiful Custom Paperless Prom Invitations 🎗️
+🎗️ Beautiful Custom Paperless Mobile-First Prom Invitation 🎗️
