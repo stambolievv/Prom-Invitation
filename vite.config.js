@@ -16,10 +16,10 @@ const banner = `
 `.trim();
 const outputFolder = 'dist'; // Specify the output directory (relative to project root).
 const assetsFolder = 'assets'; // Specify the assets folder (relative to project root).
-const isForGithub = process.env.BRANCH === 'gh-pages';
+const publicPath = process.env.BRANCH === 'gh-pages' ? '/Prom-Invitation/' : '/' // The name of the Github repository
 
 export default defineConfig({
-  base: isForGithub ? '/Prom-Invitation/' : '/', // The name of the Github repository
+  base: publicPath,
   assetsInclude: assetsFolder,
   server: {
     open: true,
@@ -50,5 +50,8 @@ export default defineConfig({
     viteStaticCopy({ targets: [{ src: `${assetsFolder}/images`, dest: assetsFolder }] }),
     viteBanner({ outDir: outputFolder, content: banner }),
     createHtmlPlugin({ minify: true }),
-  ]
+  ],
+  define: {
+    APP_HOST_URL: `${publicPath.slice(0, -1) || (() => { })}`,
+  }
 });
