@@ -1,0 +1,26 @@
+#location .map-container {
+  width: 100%;
+  margin-block-start: 10%;
+}
+
+#location .map-container .map-name {
+  margin-block: 1%;
+
+  font-family: 'Eurof35', serif;
+  font-size: min(3rem, 10vw);
+  font-weight: normal;
+  font-style: italic;
+}
+
+#location .map-container .map {
+  width: 100%;
+  height: 60vh;
+  max-width: 1000px;
+
+  border: none;
+  filter: invert(90%);
+}
+
+#location .separator {
+  margin-block: min(20vw, 20%);
+}

@@ -1,29 +1,29 @@
 #invitation {
-  color: var(--clr-invitation-text);
-  font-family: 'Eurof35', serif, sans-serif, monospace;
-  text-align: center;
+  margin-block: 25vmax;
+
+  color: var(--clr-primary-200);
+  font-family: 'Eurof35', serif;
 }
 
 #invitation .content {
-  margin: 0 2rem;
-
+  width: 100%;
   font-size: min(3rem, 8vw);
-  line-height: 110%;
 }
 
 #invitation p {
-  font-weight: 900;
-  margin: 1.5rem 0;
+  margin-block: 3%;
+  font-weight: bold;
 }
 
-#invitation span.recipient,
-#invitation input.recipient {
-  color: var(--clr-invitation-name);
-  font-size: inherit;
-  font-family: 'Calligraph', serif, sans-serif, monospace;
+#invitation .recipient {
+  display: inline-block;
+
+  color: var(--clr-ascent);
+  font-family: 'Calligraph', serif;
 }
 
 #invitation input.recipient {
-  max-width: 25%;
+  max-width: 40%;
   background-color: transparent;
+  font-size: inherit;
 }

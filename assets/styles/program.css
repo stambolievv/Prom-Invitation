@@ -1,47 +1,47 @@
 #program {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 10vmax;
 
-  margin-bottom: 5rem;
-
-  color: var(--clr-program-text);
-  font-family: 'Solena', serif, sans-serif, monospace;
-  text-align: center;
+  font-family: 'Solena', serif;
 }
 
-#program article {
-  margin: 0 1rem;
-  padding: 2rem;
+#program .headline {
+  width: 100%;
+  margin-block-end: 10%;
+
+  font-size: min(10rem, 30vw);
 }
 
-#program article .caption {
-  padding: 2rem;
+#program .card {
+  flex: 1;
+  align-self: stretch;
+}
 
+#program .card .caption {
   font-size: min(9rem, 25vw);
-  font-weight: 100;
+  font-weight: normal;
 }
 
-#program article .description {
-  padding-bottom: 1rem;
-  font-weight: 900;
+#program article .icon {
+  margin-block: 5%;
+}
 
-  color: var(--clr-program-description);
+#program .card .description {
+  margin-block-end: 5%;
+
+  color: var(--clr-ascent);
   font-size: min(4rem, 12vw);
+  font-weight: bold;
 }
 
-#program article .sub-description {
+#program .card .sub-description {
   position: relative;
 
-  color: var(--clr-program-sub-description);
-  font-family: 'Eurof35', serif, sans-serif, monospace;
+  font-family: 'Eurof35', serif;
   font-size: min(2rem, 8vw);
   font-style: italic;
 }
 
-#program article .sub-description::before {
+#program .card .sub-description::before {
   content: '';
   position: absolute;
   width: 50%;
@@ -49,25 +49,5 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--clr-program-sub-description);
-}
-
-#program .separator {
-  padding: 0 2rem;
-  margin: 0 100%;
-}
-
-#program .map {
-  min-width: 80vw;
-  height: 60vh;
-  margin: 5rem 0;
-
-  border: none;
-  filter: invert(90%);
-}
-
-@media only screen and (max-width: 480px) {
-  #program .map {
-    min-width: 95%;
-  }
+  background: var(--clr-primary-300);
 }

@@ -1,13 +1,9 @@
 #landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 100%;
   min-height: 100vh;
 
-  color: var(--clr-landing-text);
-  font-family: 'bridal', serif, sans-serif, monospace;
-  text-align: center;
+  color: var(--clr-ascent);
+  font-family: 'bridal', serif;
 }
 
 #landing::before {
@@ -21,14 +17,12 @@
 }
 
 #landing .heading {
-  display: inline-block;
-
   font-size: min(10rem, 10vw);
-  line-height: 190%;
+  line-height: 200%;
 }
 
 #landing .heading span {
-  color: var(--clr-landing-name);
+  line-height: 0;
   font-size: 150%;
 }
 
@@ -40,6 +34,6 @@
 
 @media only screen and (hover: none) and (any-pointer: coarse) {
   #landing .heading {
-    margin-top: -10rem;
+    margin-top: -10rem; /* fix: 'bridal' ff is broken in mobile */
   }
 }
