@@ -15,6 +15,7 @@ export function decorateContext(ctx, next) {
   Object.assign(ctx, {
     render: content => render(content, root),
     baseUrl,
+    root,
   });
 
   next();

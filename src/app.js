@@ -1,11 +1,9 @@
 import page from 'page';
-import { decorateContext } from './middleware/context';
-
-import { createInvitation } from './views/invitationCreate';
-import { viewInvitation } from './views/invitationView';
+import { decorateContext } from './middleware';
+import { invitationCreate, invitationView } from './views';
 
 page(decorateContext);
-page('/', createInvitation);
-page('/pokana/:id', viewInvitation);
+page('/', invitationCreate);
+page('/pokana/:id', invitationView);
 
 page.start();

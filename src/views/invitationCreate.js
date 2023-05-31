@@ -1,17 +1,20 @@
 import page from 'page';
 import { html } from 'lit-html';
 import { createRecipient } from '../api/services';
-import { invitation } from '../templates/invitationTemplate';
+import { invitation } from '../templates';
 
 /**
  * @description Renders a form for creating a new invitation to a recipient.
  * @param {PageJS.Context} ctx - The context object to use for rendering the form.
+ * @param {Function} next - The next function in the middleware chain.
  */
-export function createInvitation(ctx) {
+export function invitationCreate(ctx, next) {
   const { baseUrl } = ctx;
 
   const template = invitation(html`<input @keydown=${onSubmit} class="recipient" type="text" name="recipient" aria-label="recipient" />`, baseUrl);
   ctx.render(template);
+
+  next();
 }
 
 /**
