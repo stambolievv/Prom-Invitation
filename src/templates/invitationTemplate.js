@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 
-export const invitation = (prop, path) => html`
+export default (prop, path) => html`
   <section id="landing">
     <h1 class="heading">Абитуриентски бал<br /><span>Мели</span></h1>
   </section>

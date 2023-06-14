@@ -1,5 +1,1 @@
-import { decorateContext } from './context';
-
-export {
-  decorateContext,
-};
+export { decorateContext } from './context';

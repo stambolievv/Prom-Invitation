@@ -1,5 +1,1 @@
-import { invitation } from './invitationTemplate';
-
-export {
-  invitation,
-};
+export { default as invitation } from './invitationTemplate';
