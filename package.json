@@ -38,15 +38,17 @@
     "page": "^1.11.6"
   },
   "devDependencies": {
-    "eslint": "^8.36.0",
+    "@babel/eslint-parser": "^7.21.8",
+    "eslint": "^8.42.0",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^40.0.2",
+    "eslint-plugin-jsdoc": "^46.2.6",
+    "eslint-plugin-promise": "^6.1.1",
     "gh-pages": "^5.0.0",
     "imagemin-cli": "^7.0.0",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.8",
     "vite": "^3.2.5",
     "vite-plugin-banner": "^0.7.0",
     "vite-plugin-html": "^3.2.0",
-    "vite-plugin-static-copy": "^0.13.1"
+    "vite-plugin-static-copy": "^0.16.0"
   }
 }
