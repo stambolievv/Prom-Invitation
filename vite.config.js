@@ -49,9 +49,6 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({ targets: [{ src: `${assetsFolder}/images`, dest: assetsFolder }] }),
     viteBanner({ outDir: outputFolder, content: banner }),
-    createHtmlPlugin({ minify: true }),
-  ],
-  define: {
-    APP_HOST_URL: `${publicPath.slice(0, -1)}`,
-  }
+    createHtmlPlugin({ minify: true, inject: { data: { APP_HOST_URL: publicPath.slice(0, -1) } } }),
+  ]
 });
