@@ -37,7 +37,7 @@ export default defineConfig({
         chunkFileNames: '[name].js',
         entryFileNames: '[name].js',
         assetFileNames: ({ name = '' }) => {
-          if (/\\favicon/.test(name)) return `${assetsFolder}/images/favicon/[name][extname]`;
+          if (/\\favicon\\/.test(name)) return `${assetsFolder}/images/favicon/[name][extname]`;
           if (/\.css/.test(name)) return `${assetsFolder}/styles/[name][extname]`;
           if (/\.(woff2?|ttf|otf)$/.test(name)) return `${assetsFolder}/fonts/[name][extname]`;
           if (/\.(png|jpe?g|svg)$/.test(name)) return `${assetsFolder}/images/[name][extname]`;
@@ -52,6 +52,6 @@ export default defineConfig({
     createHtmlPlugin({ minify: true }),
   ],
   define: {
-    APP_HOST_URL: `${publicPath.slice(0, -1) || (() => { })}`,
+    APP_HOST_URL: `${publicPath.slice(0, -1)}`,
   }
 });
